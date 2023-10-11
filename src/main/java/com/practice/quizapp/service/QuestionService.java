@@ -44,4 +44,16 @@ public class QuestionService {
 			return new ResponseEntity<>("failed",HttpStatus.BAD_REQUEST);
 		}
 	}
+
+	
+	public List<Question> getRandomQuestionByLangWithLimit(String lang, int num) {
+		try {
+//			Store the 
+			return repo.getRandomQuestionByLangWithLimit(lang,num);
+		}catch(Exception error) {
+			System.out.print(error);
+			return new ArrayList<>();
+		}
+	}
+
 }
